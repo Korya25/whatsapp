@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp/fatutres/chats/chats.dart';
+import 'package:whatsapp/fatutres/chats/screen/chats.dart';
 
 void main() {
   runApp(const MyApp());
