@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:whatsapp/fatutres/auth/cuibts/auth_cuibt.dart';
+import 'package:whatsapp/fatutres/auth/screens/login/login_page.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -73,6 +76,23 @@ class SettingsPage extends StatelessWidget {
             title: 'Invite a Friend',
             onTap: () {
               // Handle Invite a Friend Tap
+            },
+          ),
+          _buildSettingsOption(
+            context,
+            icon: Icons.logout,
+            title: "L O G O U T",
+            onTap: () async {
+              Navigator.pop(context);
+
+              // Log out
+              await context.read<AuthCubit>().logout();
+              // ignore: use_build_context_synchronously
+              Navigator.pushReplacement(context, MaterialPageRoute(
+                builder: (context) {
+                  return LoginPage();
+                },
+              ));
             },
           ),
           const SizedBox(height: 20),

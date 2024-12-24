@@ -13,7 +13,7 @@ String handleLoginError(String errorCode) {
     case 'requires-recent-login':
       return "Please try again later";
     default:
-      return "Please try again";
+      return errorCode.toString();
   }
 }
 
@@ -36,6 +36,6 @@ String handleRegisterError(String errorCode) {
     case 'invalid-credential':
       return "Please try again.";
     default:
-      return "Please try again.";
+      return errorCode.toString();
   }
 }
