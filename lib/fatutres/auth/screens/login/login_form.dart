@@ -57,7 +57,7 @@ class _LoginFormState extends State<LoginForm> {
           ),
           // Login Button
           LoginButtons(
-            //  isValid: isValid,
+            isValid: isValid,
             email: emailController.text,
             password: passController.text,
           ),

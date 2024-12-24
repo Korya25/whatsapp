@@ -23,7 +23,7 @@ class _LoginOrRegisterScreenState extends State<LoginOrRegisterScreen> {
       body: AnimatedSwitcher(
         duration: Duration(milliseconds: 30),
         child: showLoginPage
-            ? LoginScreen(
+            ? LoginPage(
                 onTap: togglePage,
               )
             : RegisterScreen(

@@ -6,14 +6,14 @@ import 'package:whatsapp/fatutres/auth/widgets/action_auth_button.dart';
 import 'package:whatsapp/fatutres/auth/widgets/custom_login_google.dart';
 
 class LoginButtons extends StatelessWidget {
-  //final bool isValid;
+  final bool isValid;
   final double spacing;
   final String email;
   final String password;
 
   const LoginButtons({
     super.key,
-    //  required this.isValid,
+    required this.isValid,
     this.spacing = 13,
     required this.email,
     required this.password,
@@ -66,7 +66,7 @@ class LoginButtons extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-              backgroundColor: Colors.blue,
+              backgroundColor: Colors.blue, isEnabled: isValid,
               //isEnabled: isValid && !isLoading,
             ),
 
