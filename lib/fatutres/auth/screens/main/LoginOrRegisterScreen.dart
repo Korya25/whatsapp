@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/fatutres/auth/screens/login/login_page.dart';
+import 'package:whatsapp/fatutres/auth/screens/register/register_page.dart';
 
 class LoginOrRegisterScreen extends StatefulWidget {
   const LoginOrRegisterScreen({super.key});
@@ -22,10 +23,12 @@ class _LoginOrRegisterScreenState extends State<LoginOrRegisterScreen> {
       body: AnimatedSwitcher(
         duration: Duration(milliseconds: 30),
         child: showLoginPage
-            ? LoginPage(
+            ? LoginScreen(
                 onTap: togglePage,
               )
-            : Text("register"),
+            : RegisterScreen(
+                onTap: togglePage,
+              ),
       ),
     );
   }
